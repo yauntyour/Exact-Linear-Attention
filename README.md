@@ -275,19 +275,6 @@ In long-range training, ELA maintains stable convergence.
 
 ---
 
-## Citation
-
-```bibtex
-@article{exactlinearattention2026,
-  title={Exact Linear Attention: Achieving O(L) Complexity Without Approximation},
-  author={Yuntian Yao},
-  journal={arXiv preprint},
-  year={2026}
-}
-```
-
----
-
 ## References
 
 | Year | Work | Venue |
