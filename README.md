@@ -102,12 +102,12 @@ The decomposition of the aforementioned kernel functions can be illustrated as f
 - **Summation Squared Euclidean Distance Kernel**:
 
   $$k(A_i,B_j) = \|A_i + B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 + 2A_i\cdot B_j$$
-  $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} 2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
+  $$\phi(A_i) = \begin{pmatrix} A_i \\[2pt] \lVert A_i\rVert^2 \\[2pt] 1 \end{pmatrix} \in \mathbb{R}^{D+2},\qquad \psi(B_j) = \begin{pmatrix} 2B_j \\[2pt] 1 \\[2pt] \lVert B_j\rVert^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
 - **Subtraction Squared Euclidean Distance Kernel**:
 
   $$k(A_i,B_j) = \|A_i - B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 - 2A_i\cdot B_j$$
-  $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} -2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
+  $$\phi(A_i) = \begin{pmatrix} A_i \\[2pt] \lVert A_i\rVert^2 \\[2pt] 1 \end{pmatrix} \in \mathbb{R}^{D+2},\qquad \psi(B_j) = \begin{pmatrix} -2B_j \\[2pt] 1 \\[2pt] \lVert B_j\rVert^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
 - **Hadamard Exp Kernel**:
 
