@@ -1,23 +1,5 @@
 # Exact Linear Attention
 
-**Authors:** Weinuo Ou, Student, Wuyi University
-
-**GitHub:** [https://github.com/yauntyour/Exact-Linear-Attention](https://github.com/yauntyour/Exact-Linear-Attention)
-
----
-
-## Abstract
-
-This paper introduces Exact Linear Attention (ELA), a mechanism that achieves linear computational complexity for Transformer attention by exploiting the exact decomposition property of kernel functions, thereby eliminating approximation error. We identify and address two key limitations of prior linear attention—gradient explosion and token attention dilution—by imposing kernel constraints that ensure non‑negativity, discriminability, and geometric interpretability. Several kernel functions are proposed, including the Hadamard Exp Kernel, Summation Squared Euclidean Distance Kernel, and Subtraction Squared Euclidean Distance Kernel, each tailored for specific attention behaviors.
-
-Beyond the core attention formulation, the paper presents three engineering innovations: (1) a Hyper‑Link structure that replaces traditional residual connections to mitigate gradient degradation; (2) a Memory Lobe module based on bidirectional linear attention, which captures "transformation flow" across layers to implement qualitative memory and an implicit reinforcement learning paradigm; and (3) a routing‑score‑based bias mechanism for Mixture‑of‑Experts (MoE) to improve interpretability and semantic alignment.
-
-Experimental data demonstrate that all our engineering innovations have achieved outstanding results. The Hyper-Link design delivers remarkable improvements in training convergence speed and stability. Meanwhile, the memory attention query module built upon this design offers new insights for the evolution of large language models (LLMs). Furthermore, we migrated the operators based on exact linear attention to existing LLMs for validation, which verifies that their exact decomposability ensures strong compatibility and replaceability with GPT-style models. When extended to vision models for object detection tasks, our approach also achieves leaps in both parameter efficiency and computational performance.
-
-**Keywords:** Exact Linear Attention, Kernel decomposition, Hadamard Exp Kernel, Summation Squared Euclidean Distance Kernel, Subtraction Squared Euclidean Distance Kernel, Linear complexity, Hyper-Link, Memory Lobe, Transformation Flow, Qualitative memory, KV cache efficiency, Inference speed, Mixture-of-Experts (MoE), Long-sequence processing, Gradient explosion, Attention dilution
-
----
-
 ## Table of Contents
 
 - [1. Introduction](#1-introduction)
@@ -117,22 +99,19 @@ $$k(A_i, B_j) = \phi(A_i)\psi(B_j)^\top$$
 
 The decomposition of the aforementioned kernel functions can be illustrated as follows:
 
-- **Summation Squared Euclidean Distance Kernel**
+- **Summation Squared Euclidean Distance Kernel**:
 
   $$k(A_i,B_j) = \|A_i + B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 + 2A_i\cdot B_j$$
-  Which:
   $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} 2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
-- **Subtraction Squared Euclidean Distance Kernel**
+- **Subtraction Squared Euclidean Distance Kernel**:
 
   $$k(A_i,B_j) = \|A_i - B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 - 2A_i\cdot B_j$$
-  Which:
   $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} -2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
-- **Hadamard Exp Kernel**
+- **Hadamard Exp Kernel**:
 
   $$k(A_i,B_j) = \exp(A_i) \ast \exp(B_j) = \sum_{d=1}^{D} \exp(A_{id})\exp(B_{jd})$$
-  Which:
   $$\phi(A_i) = \begin{pmatrix} \exp(A_{i1}) \\ \vdots \\ \exp(A_{iD}) \end{pmatrix} \in \mathbb{R}^{D},\quad \psi(B_j) = \begin{pmatrix} \exp(B_{j1}) \\ \vdots \\ \exp(B_{jD}) \end{pmatrix} \in \mathbb{R}^{D}$$
 
 For further illustration, the exact decomposition itself actually imposes little requirement on symmetry.
@@ -414,7 +393,6 @@ All these endeavors are inseparable from our core insight: Exact Linear Attentio
 - [mzwing (Lockinwize Lolite)](https://github.com/mzwing)
 - [hibays (hibays)](https://github.com/hibays)
 - .....
-
 
 ---
 
