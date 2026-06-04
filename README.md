@@ -120,19 +120,19 @@ The decomposition of the aforementioned kernel functions can be illustrated as f
 - **Summation Squared Euclidean Distance Kernel**
 
   $$k(A_i,B_j) = \|A_i + B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 + 2A_i\cdot B_j$$
-
+  Which:
   $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} 2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
 - **Subtraction Squared Euclidean Distance Kernel**
 
   $$k(A_i,B_j) = \|A_i - B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 - 2A_i\cdot B_j$$
-
+  Which:
   $$\phi(A_i) = \begin{pmatrix} A_i \\ \|A_i\|^2 \\ 1 \end{pmatrix} \in \mathbb{R}^{D+2},\quad \psi(B_j) = \begin{pmatrix} -2B_j \\ 1 \\ \|B_j\|^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
 
 - **Hadamard Exp Kernel**
 
   $$k(A_i,B_j) = \exp(A_i) \ast \exp(B_j) = \sum_{d=1}^{D} \exp(A_{id})\exp(B_{jd})$$
-
+  Which:
   $$\phi(A_i) = \begin{pmatrix} \exp(A_{i1}) \\ \vdots \\ \exp(A_{iD}) \end{pmatrix} \in \mathbb{R}^{D},\quad \psi(B_j) = \begin{pmatrix} \exp(B_{j1}) \\ \vdots \\ \exp(B_{jD}) \end{pmatrix} \in \mathbb{R}^{D}$$
 
 For further illustration, the exact decomposition itself actually imposes little requirement on symmetry.
@@ -407,7 +407,14 @@ All these endeavors are inseparable from our core insight: Exact Linear Attentio
 
 ## Acknowledgments
 
-I sincerely appreciate the anonymous reviewers and the associate editor for their valuable time, rigorous reviews, and insightful constructive comments. Their professional feedback and thoughtful suggestions have greatly helped refine the technical presentation, consolidate the logical framework, and substantially improve the overall quality of this manuscript.
+> I sincerely appreciate the anonymous reviewers and the associate editor for their valuable time, rigorous reviews, and insightful constructive comments. Their professional feedback and thoughtful suggestions have greatly helped refine the technical presentation, consolidate the logical framework, and substantially improve the overall quality of this manuscript.
+
+作者感谢所有给予过帮助的朋友（排名不分先后）
+
+- [mzwing (Lockinwize Lolite)](https://github.com/mzwing)
+- [hibays (hibays)](https://github.com/hibays)
+- .....
+
 
 ---
 
