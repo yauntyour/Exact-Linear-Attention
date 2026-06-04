@@ -100,19 +100,11 @@ $$k(A_i, B_j) = \phi(A_i)\psi(B_j)^\top$$
 The decomposition of the aforementioned kernel functions can be illustrated as follows:
 
 - **Summation Squared Euclidean Distance Kernel**:
-
   $$k(A_i,B_j) = \|A_i + B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 + 2A_i\cdot B_j$$
-  $$\phi(A_i) = \begin{pmatrix} A_i \\[2pt] \lVert A_i\rVert^2 \\[2pt] 1 \end{pmatrix} \in \mathbb{R}^{D+2},\qquad \psi(B_j) = \begin{pmatrix} 2B_j \\[2pt] 1 \\[2pt] \lVert B_j\rVert^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
-
 - **Subtraction Squared Euclidean Distance Kernel**:
-
   $$k(A_i,B_j) = \|A_i - B_j\|^2 = \|A_i\|^2 + \|B_j\|^2 - 2A_i\cdot B_j$$
-  $$\phi(A_i) = \begin{pmatrix} A_i \\[2pt] \lVert A_i\rVert^2 \\[2pt] 1 \end{pmatrix} \in \mathbb{R}^{D+2},\qquad \psi(B_j) = \begin{pmatrix} -2B_j \\[2pt] 1 \\[2pt] \lVert B_j\rVert^2 \end{pmatrix} \in \mathbb{R}^{D+2}$$
-
 - **Hadamard Exp Kernel**:
-
   $$k(A_i,B_j) = \exp(A_i) \ast \exp(B_j) = \sum_{d=1}^{D} \exp(A_{id})\exp(B_{jd})$$
-  $$\phi(A_i) = \begin{pmatrix} \exp(A_{i1}) \\ \vdots \\ \exp(A_{iD}) \end{pmatrix} \in \mathbb{R}^{D},\quad \psi(B_j) = \begin{pmatrix} \exp(B_{j1}) \\ \vdots \\ \exp(B_{jD}) \end{pmatrix} \in \mathbb{R}^{D}$$
 
 For further illustration, the exact decomposition itself actually imposes little requirement on symmetry.
 
