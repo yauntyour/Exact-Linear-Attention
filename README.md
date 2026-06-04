@@ -1,5 +1,12 @@
 # Exact Linear Attention
 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.18848-b31b1b.svg?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.18848)
+[![GitHub Stars](https://img.shields.io/github/stars/yauntyour/Exact-Linear-Attention?style=flat-square&logo=github)](https://github.com/yauntyour/Exact-Linear-Attention/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/yauntyour/Exact-Linear-Attention?style=flat-square&logo=github)](https://github.com/yauntyour/Exact-Linear-Attention/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/yauntyour/Exact-Linear-Attention?style=flat-square&logo=github)](https://github.com/yauntyour/Exact-Linear-Attention/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yauntyour/Exact-Linear-Attention?style=flat-square&logo=github)](https://github.com/yauntyour/Exact-Linear-Attention/pulls)
+[![Last Commit](https://img.shields.io/github/last-commit/yauntyour/Exact-Linear-Attention?style=flat-square&logo=github)](https://github.com/yauntyour/Exact-Linear-Attention/commits/main)
+
 ## Table of Contents
 
 - [1. Introduction](#1-introduction)
